@@ -20,8 +20,8 @@ Features
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/seoscan_agent.git
-cd seoscan_agent
+git clone https://github.com/Bahaatbb/SEO-Scan.git
+cd SEO-Scan
 ```
 <hr/>
 
