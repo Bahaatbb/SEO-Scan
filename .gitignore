@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables & secrets
+.env
+.env.*
+
+# Conda environment files (optional)
+*.conda
+*.env
+*.venv
+
+# VSCode and other IDE settings
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter notebook checkpoints (if you use notebooks)
+.ipynb_checkpoints/
+
+# Pip and Conda stuff
+pip-wheel-metadata/
+*.egg-info/
+dist/
+build/
+
+# Python virtual environments
+venv/
+.venv/
+ENV/
+env/
+environment.yml
