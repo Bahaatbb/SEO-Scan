@@ -3,8 +3,13 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Environment variables & secrets
+.env
+.env.*
+
 # Conda environment files (optional)
 *.conda
+*.env
 *.venv
 
 # VSCode and other IDE settings

@@ -1,8 +1,13 @@
+import re
+
 import requests
 from bs4 import BeautifulSoup
-import re
-from ..utils import normalize_url
 from llama_index.llms.openai import OpenAI
+
+from seoscan_agent.env import OPENAI_API_KEY
+
+from ..utils import normalize_url
+
 
 def keyword_extraction_tool(domain: str, max_keywords: int = 10) -> dict:
     """Extract top keywords from homepage content."""
@@ -36,8 +41,7 @@ def schema_validation_tool(domain: str) -> dict:
         return {"error": str(e)}
 
 def llm_keywords_from_content_tool(html: str) -> dict:
-    # For production, you'd want to pass in the LLM instance from main/agents
-    llm = OpenAI(model="gpt-4o-mini")
+    llm = OpenAI(model="gpt-4o-mini", api_key=OPENAI_API_KEY, temperature=0.3, request_timeout=990)
     prompt = f"""
 You are an expert at identifying a website's main topics for SEO/competitor analysis.
 Given this homepage HTML/text:
